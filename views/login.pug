@@ -1,0 +1,25 @@
+extends base
+
+block vars
+    - title = "Login"
+
+block body
+    h1 Log into your account
+
+    if error
+        p ERROR: #{error}
+
+    form(method = "post")
+
+        span Email:
+        input(type = "email", name = "email", required = true)
+        br
+
+        span Password:
+        input(type = "password", name = "password", required = true)
+        br
+
+        input(type = "hidden", name = "_csrf", value = csrfToken)
+        br
+
+        input(type = "submit")
