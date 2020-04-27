@@ -1,0 +1,2 @@
+# ss-auth
+Basic Auth
